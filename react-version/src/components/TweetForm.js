@@ -5,7 +5,9 @@ function TweetForm(){
   
   return (
     <section class="newtweet">
-      <form method="post" action="/tweets" class="newtweet__form">
+      <form method="post" action="/tweets" class="newtweet__form" onSubmit={(event) => {
+        event.preventDefault();
+      }}>
         <textarea class="form__textarea" name="text" placeholder={prompt}></textarea>
         <input type="submit" value="Tweet" class="form__input" />
         <span class="form__counter">140</span>
